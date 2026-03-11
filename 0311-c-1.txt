@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() 
+{
+    int day;
+    float money;
+    char grade;
+    char name[50];  //여행지이름 저장 (문자열)
+    
+    printf("여행지 이름: ");    //화면 출력 f(서식)
+    // 숫자 따옴표 X || 문자 따옴표 O
+    scanf("%s",name);   //키보드로 입력
+                        //문자열은 %s, 문자(한글자), 문자열(두글자 이상)  
+    // name이란 배열 이름이 이미 주소여서 주소를 의미하는 &가 필요 없음   
+    
+    printf("여행 일수: ");
+    scanf("%d",&day);   //%d = 정수
+    
+    
+    printf("여행 경비:");   
+    scanf("%f",&money); //%f = 실수
+    
+    
+    printf("여행 등급을 입력하세요 (A,B,C 중 한글자): ");
+    scanf(" %c",&grade);    //%c 문자1글자
+                            //%c 앞에 공백을 주는 이유 : 위에 엔터키를 무시하기 위해서
+    
+    printf("\n여행지 이름은: %s\n",name);
+    printf("여행 일수는: %10d\n",day);
+    printf("여행 경비는: %5.1f\n",money);
+    printf("여행 등급은: %c\n",grade);
+    
+    
+    return 0;
+}
+
+//  5.1f는 소수점 포함 전체 5칸을 확보하고, 소수점 아래 첫째 자리까지만 출력한다. 5칸 초과하면 그냥 출력
+//  %10d는 정수를 출력하기 위해 전체 10칸의 자리를 미리 확보한다.
