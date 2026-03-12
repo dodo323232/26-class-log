@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+   int num;
+   
+   while(1) //while은 참일때 반복. 1은 참(true) 0은 거짓(false)이기때문에 무한 반복
+{
+   printf("숫자를 입력하세요:");
+   scanf("%d", &num);
+   
+   if(num == 10)
+   {
+       printf("정답입니다\n");  
+       break;   //빠져나올 수 있게 break문
+       
+   }
+   
+   else if(num > 10)
+   {
+       printf("너무 높아요\n");
+   }
+   
+   else{
+       printf("너무 낮아요\n");
+   }
+}
+    return 0;
+}
