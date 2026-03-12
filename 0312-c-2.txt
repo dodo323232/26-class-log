@@ -1,0 +1,29 @@
+#include#include <stdio.h>
+
+int main()
+{
+    char blood;
+    
+    printf("혈액형 입력(A,B,O): ");
+    scanf("%c", &blood);
+    
+    //조건문 switch ~case
+    switch(blood)    //switch ~case문에는 탈출 기능이 없음(break 필수)
+                    /*switch는 정수 값만 처리하기 떄문에 문자열은 조건으로 넣을 수 없다. 
+                    하지만 문자는 아스키 코드라는 정수로 저장되기 때문에 조건으로 넣을 수 있다.*/ 
+    {               
+        case 'A': //case는 두줄이 넘어도 중괄호를 쓰지 않음. (문자열은 쌍따옴표 문자 하나는 따옴표)
+            printf("A형 입니다.\n");
+            break;
+        case 'B':
+            printf("B형 입니다.\n");
+            break;
+        case 'O':
+            printf("O형 입니다.\n");
+            break;
+        default:       //A,B,C 외에 다른 숫자가 나올시 실행됨
+            printf("입력 오류\n");
+    }
+    
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int sub;  //정수선언
+  
+   while(1)        //반복 , 0->거짓(false), 1->참(true)
+                   //while은 참일때 반복하는데 1은 참이기 때문에 무한반복한다
+   {  
+        printf("점수 입력:");   //출력
+        scanf("%d",&sub);    //정수형 sub 입력
+    
+        if (sub==10) //if 조건이 참이면 실행되는 블록 (10이랑 같다) 
+        { 
+            printf("정답\n");
+            break;
+        }     //if 뒤에는 ;를 쓰지 않는다.(문장이 아직 끝나지 않았기 때문)
+        
+        else if (sub<10)  //위 if 조건이 거짓일 때 else if로 넘어옴 (10보다 작다)
+            printf("너무 작아요\n");
+    
+        else 
+            printf("너무 커요\n");
+    }
+    return 0;
+}
