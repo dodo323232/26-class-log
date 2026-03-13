@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+      
+    printf("메뉴를 선택하세요(1:치킨, 2:피자, 3:떡볶이:, 4:햄버거 5~7: 랜덤): ");
+    scanf("%d", &num);    
+    
+    if (num == 1) 
+    {
+        printf("치킨");       
+    }
+        
+    else if (num == 2) 
+    {
+        printf("\n피자\n\n\n");
+    }   
+    
+     else if (num == 3) 
+    {
+        printf("\n떡볶이\n\n\n");
+    }   
+    
+     else if (num == 4) 
+    {
+        printf("\n햄버거\n\n\n");
+    }   
+    
+     else if (num>=5 && num<=7)     /*&&: 조건을 전부 만족해야 참이다  (5<= num <=7)은 왼쪽부터 계산한다.
+				 만약 왼쪽 식이 참이면 1로 변환되서 오른쪽 식으로 간다. 
+				따라서 두 조건을 명확하게 따져주기 위해서 논리 연산자를 사용해야한다 */
+    {
+        printf("\n랜덤\n\n\n");
+    }   
+    
+    else
+    {
+        printf("입력 오류\n\n\n");
+    }
+ 
+    return 0;
+}
