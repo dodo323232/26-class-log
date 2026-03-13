@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1,num2,sum,sub,mul;
+    double divi;
+    char op;
+   
+    printf("첫번째 숫자를 입력하세요. ");
+    scanf("%d",&num1);
+    
+    printf("연산자 입력(+ - * /): ");
+    scanf(" %c", &op);
+    
+    printf("두번째 숫자를 입력하세요. ");
+    scanf("%d",&num2);
+    
+    if (op =='+')
+    {
+        sum= num1+num2;
+        printf("덧셈 결과: %d",sum);
+    }
+    else if (op =='-')
+    {
+        sub=num1-num2;
+        printf("뺼셈 결과: %d",sub);
+    }
+    else if (op =='*')
+    {
+        mul=num1*num2;
+        printf("곱셈 결과: %d",mul);
+    }
+    else if (op =='/')
+    {
+        divi=(double)num1/num2;		//정수끼리 연산하면 정수값이 나오기 때문에 변수 하나를 실수형으로 바꿔야 한다 (double)
+        printf("나눗셈 결과: %.2f",divi);
+    }
+    else
+        printf("입력 오류");
+}
