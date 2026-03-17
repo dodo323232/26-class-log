@@ -1,0 +1,67 @@
+#include <stdio.h>
+int main()
+{
+    int num1, num2, res1;
+    double res2;
+    char op;
+
+    while (1)   //무한반복 하기 위해서 항상 참인 1을 넣음
+    {
+        printf("첫번째 숫자를 입력하세요. ");  //visual studio에서는 scanf 안됨 (오버 플러우)
+        scanf_s("%d", &num1);       //정수 입력
+
+        printf("연산자 입력(+ - * /): ");       
+        scanf_s(" %c", &op);                //위에 엔터키를 무시하기 위해 %c 앞에 공백
+
+        printf("두번째 숫자를 입력하세요. ");
+        scanf_s("%d", &num2);       //정수 입력
+
+        switch (op)
+        {
+        case '+':
+            res1 = num1 + num2; 
+            //printf("덧셈결과: %d\n", sum);
+            break;
+
+        case '-':
+            res1 = num1 - num2;                         //기호에 따라 연산을 각자 다르게 하기 위해 switch문을 사용함
+            //printf("뺄셈결과: %d\n", sub);
+            break;
+
+        case '*':
+            res1 = num1 * num2;
+            //printf("곱셉결과: %d\n", mul);
+            break;
+
+        case '/':
+            res2 = (double)num1 / num2;       //정수끼리 연산하면 정수만 나오므로 변수 하나를 실수로 바꾼다
+            //printf("나눗셈결과: %.2f\n", divi);
+            break;
+
+            /*default:
+                printf("입력오류\n");
+                break;*/
+        }                                          // + 또는 -또는 *가 나올때 참
+        if (op == '+' || op == '-' || op == '*') { //op == '+' || '-' || '*" 라고 쓰면 항상 참이됨
+            printf("%d", res1);
+        }
+        else if (op == '/') {
+            printf("%.2f", res2);
+        }
+        else {
+            printf("입력 오류");
+        }
+        
+        printf("\n연산을 종료하시겠습니까? (y/Y)\n");
+        char yn;
+        scanf_s(" %c",&yn);     //엔터 무시하기위해 %c 앞에 공백
+
+        if (yn == 'Y' || yn == 'y')     //&& 모두 참, ||둘중 하나만 참   Y 또는 y가 나오면 반복문 종료
+            break;
+
+    }
+
+
+
+    return 0;
+}
