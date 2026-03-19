@@ -1,0 +1,39 @@
+//1~5까지 출력
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	//int i = 2;	//초기값 1~100수
+	//int sum = 0;	//합계 누적
+
+	//while (i <= 100)	//조건이 참일 때 반복 i가 100일때 끝
+	//{
+	//	//i += 1;	//혼합 연산자, i++;
+	//	//if (i % 2 == 0)
+	//	//	sum += i;
+	//	
+	//	/*sum += i;
+	//	i += 2;*/
+	//	
+
+	//}
+	//printf("1부터 100까지의 짝수의 합: %d", sum);
+
+	int num, i = 0;
+	
+	printf("양의 정수 입력: ");
+	scanf("%d", &num);	//visual studio scanf_s 해라	5입력
+	
+	while (i < num)	//5탈출
+	{
+		printf("handaman!\n");	
+		i++;	//0 1 2 3 4
+	}
+
+
+
+
+
+	return 0;
+}
