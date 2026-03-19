@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	int pass = 1234;
+	int pw = 0;
+
+	while (pw != 1234) //반복은 만족할때, 조건이 만족하지 않을때 반복문
+	{
+		printf("암호를 입력하세요. ");
+		scanf("%d", &pw);
+		if (pass != pw)
+			printf("암호 틀림\n");
+	}
+	
+	printf("정답입니다.");
+	
+	return 0;
+}
